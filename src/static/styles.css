@@ -142,3 +142,62 @@ footer {
   padding: 20px;
   color: #666;
 }
+
+/* Participants list styling */
+.activity-card h5 {
+  margin-top: 12px;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+
+.participants-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 8px 0 0 0;
+}
+
+.participants-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #ffffff 0%, #f7f9ff 100%);
+  border: 1px solid #eef3ff;
+  margin-bottom: 6px;
+  color: #1a237e;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.no-participants {
+  margin-top: 8px;
+  font-style: italic;
+  color: #666;
+}
+
+/* Delete button for participants */
+.participant-delete {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-size: 1.05rem;
+  line-height: 1;
+  padding: 6px 8px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.12s ease;
+}
+
+.participant-delete:hover {
+  background-color: rgba(198,40,40,0.08);
+}
+
+.participant-email {
+  color: #1a237e;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
