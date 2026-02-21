@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Clear loading message
       activitiesList.innerHTML = "";
       // Reset activity select and keep the placeholder
-      activitySelect.innerHTML = '<option value="">-- Select an activity --</option>';
+      activitySelect.innerHTML = '<option value="" disabled selected>-- Select an activity --</option>';
 
       // Populate activities list
       Object.entries(activities).forEach(([name, details]) => {
