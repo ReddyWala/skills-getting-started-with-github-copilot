@@ -22,8 +22,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const spotsLeft = details.max_participants - details.participants.length;
 
+        const emailSpan = (p) => {
+          const span = document.createElement('span');
+          span.className = 'participant-email';
+          span.textContent = p;
+          return span.outerHTML;
+        };
+
         const participantsHTML = details.participants && details.participants.length
-          ? `<h5>Participants</h5><ul class="participants-list">${details.participants.map(p => `<li><span class="participant-email">${p}</span><button class="participant-delete" data-activity="${name}" data-email="${p}" aria-label="Remove ${p}">✕</button></li>`).join('')}</ul>`
+          ? `<h5>Participants</h5><ul class="participants-list">${details.participants.map(p => `<li>${emailSpan(p)}<button class="participant-delete" data-activity="${name}" data-email="${p}" aria-label="Remove ${p}">✕</button></li>`).join('')}</ul>`
           : '<p class="no-participants">No participants yet</p>';
 
         activityCard.innerHTML = `
